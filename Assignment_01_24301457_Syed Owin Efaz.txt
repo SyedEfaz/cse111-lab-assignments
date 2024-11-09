@@ -1,0 +1,631 @@
+
+//task1 
+import java.util.Scanner;
+public class Task1 {
+  
+  
+  public static void main(String[] args) { 
+   Scanner sc = new Scanner(System.in);
+   double count =0.0;
+   
+   int sum =0;
+   double avg =0;
+   int max =0;
+   int min =0;
+   
+   for(int y =0;y<10;y++){
+   System.out.println("please input "+y+" number");
+   int u =sc.nextInt();
+   if( u>0 &&u%2!=0){
+   count++;
+   sum+=u;
+   max =u;
+   min =u;
+   if(max<u){
+   max =u;
+   }
+   if(min >u){
+   min =u;
+   }
+   }}
+   avg=sum/count;
+    System.out.println("Sum ="+sum );
+   System.out.println("Average ="+avg);
+  
+   System.out.println("maximum ="+max);
+   System.out.println("minimum ="+min);
+   
+ //task 2
+import java.util.Scanner;
+public class Task2 {
+  
+  
+  public static void main(String[] args) { 
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the first value :");
+    int y = sc.nextInt();
+    System.out.println("Enter the second value : ");
+      int u = sc.nextInt();
+    
+    
+    int uount=0;
+    for(int p=y;p<=u;p++){
+      int count =0;
+    for (int i = 1 ; i<=p;i++){
+      if (p%i==0){
+      count++;
+      
+      
+      }}
+      if(count==2){
+      uount+=1;
+      
+      
+      }}
+    System.out.println("there are "+ uount +"prime numbers between "+ y+"and "+u);
+    
+    
+    
+    
+    
+    
+    }
+  
+  
+  
+}
+//task3   
+import java.util.Scanner;
+public class Task3 {
+  
+  
+  public static void main(String[] args) { 
+    Scanner sct = new Scanner (System.in);
+    System.out.println("Enter the first string :");
+    String f = sct.nextLine();
+    System.out.println("Enter the second string : ");
+    String g = sct.nextLine();
+    String d =f+" "+g;
+   
+    int gf =0;
+    System.out.println(d);
+    
+    
+    
+    for(int y=0;y<d.length();y++){
+    char w =d.charAt(y);
+    
+    
+    
+    int w2 =(int)w;
+    if((w2>=65&&w2<=90)||(w2>=97&&w2<=122)){
+    
+      
+      
+    gf+=w2;
+    
+    }
+    
+    
+    
+    
+    
+    }
+    System.out.println(gf);
+    
+  }
+  
+  
+  
+}
+//task4
+import java.util.Scanner;
+public class Task4 {
+  
+  
+  public static void main(String[] args) { 
+    Scanner sct= new Scanner (System.in);
+    
+    
+    
+    System.out.println("Enter a input string with small letters :");
+    String o =sct.next();
+    
+    
+    
+    for(int i =0;i<o.length();i++){
+      
+      
+    int m =(int)(o.charAt(i));
+      if(m==65){
+    
+    m =122;
+    
+    
+    }
+    m-=1;
+    System.out.print((char)m);
+    
+    }
+    System.out.println();
+    
+    
+  }
+  
+  
+  
+}
+//task5
+import java.util.Scanner;
+public class Task5 {
+  
+  
+  public static void main(String[] args) { 
+  Scanner scd = new Scanner(System.in);
+  System.out.println("Enterthe length of the array :");
+  int y =scd.nextInt();
+  int[]t=new int[y];
+  for(int i =0; i<=t.length-1;i++){
+     System.out.println("Enter the "+i+"value of the array");
+  t[i]=scd.nextInt();
+  
+  
+  
+  }
+  for(int u =0;u<=(t.length-1)/2;u++){
+    int temp = t[u];
+            t[u] = t[t.length - 1 - u];
+           
+            t[t.length - 1 - u] = temp;
+  
+  
+  }  
+  for (int q=0;q<=t.length-1;q++){
+  System.out.print(t[q]+" ");
+  
+  
+  }  
+    
+    
+    
+    
+    
+    
+  }
+  
+  
+  
+}
+//task6
+ import java.util.Scanner;
+public class Task6 {
+  
+  
+  public static void main(String[] args) { 
+   Scanner scf = new Scanner (System.in);
+   System.out.println("please input length of the array : ");
+   int p =scf.nextInt();
+   int [] m= new int [p];
+   
+   
+   
+    for (int im = 0; im < p; im++) {
+      
+      
+            System.out.println("Enter number " + (im + 1) + ": ");
+            
+            
+            m[im] = scf.nextInt();}
+        
+   for(int o=0; o<=m.length-1;o++){
+        int count =1;
+      
+           boolean flag =false;
+           
+    for (int yp = 0; yp < o; yp++) {
+         if (m[o] == m[yp]) {
+      flag = true; 
+         break;
+                }}
+            
+   if (!flag) {
+                for (int y = o + 1; y < m.length; y++) {
+                if (m[o] == m[y]) {
+                 count++;
+                    }}
+                
+                System.out.println(m[o]+"-"+count+"times");
+            }
+   
+   
+   
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   }
+    
+    
+    
+    
+    
+    
+    
+  }
+  
+  
+  
+
+//task7   
+import java.util.Scanner;
+public class Task7 {
+  
+  
+  public static void main(String[] args) {
+    
+    
+  Scanner scq = new Scanner(System.in);
+  
+  
+  
+  
+  System.out.print("kindly enter length of the array: ");
+  
+  
+  
+  
+   int nm =scq.nextInt();
+         double [] ar= new double[nm];
+   
+   
+    System.out.println("please enter the values inside array :");
+             for(int i =0; i<nm;i++){
+        
+        
+    ar[i]=scq.nextDouble();
+    
+    
+    }
+    
+    int u =0;
+    for(int y=1;y<nm;y++){
+    
+      if(ar[y]!=ar[y-1]){
+      
+        ar[u]=ar[y-1];
+        u+=1;
+      }
+    
+    }
+    
+   ar[u++]=ar[nm-1];
+   int re=nm-u;
+   
+   
+   System.out.println("the new array is ");
+   for(int j=0;j<u;j++){
+     
+     
+   System.out.print (ar[j]+" ");
+   
+   
+   } 
+   
+    System.out.println( "removed elements :"+re);
+    
+    
+    
+    
+    
+  }}
+  
+  
+  
+
+//task8
+  import java.util.Scanner ;
+public class Task8 {
+  
+  
+  public static void main(String[] args) { 
+    
+  Scanner scu = new Scanner (System.in);
+  
+  
+  
+  System.out.println("enter the number of rows: ");
+   int yum = scu.nextInt();
+   System.out.println("enter the number of columns :");
+    int pum = scu.nextInt();
+    
+    
+    
+   int[][]  arr =new int[yum][pum];
+   System.out.println("enter the values in 2D array:");
+   
+   
+   for (int y =0; y<yum;y++){
+     
+     
+     
+     for(int u=0;u<pum;u++){
+     arr[y][u]=scu.nextInt();
+     
+     }
+   
+   }
+   System.out.println("the 2D array is :"); 
+   for(int r=0;r<yum;r++){
+     for(int j=0;j<pum;j++){
+     System.out.print(arr[r][j]+" ");
+     
+     }
+   System.out.println();
+   
+   }
+    
+   int[] ar1r2 = new int[pum*yum];
+   int  index =0;
+   for(int o=0;o<yum;o++){
+     for(int i=0;i<pum;i++){
+       
+       
+       
+     ar1r2[index++]=arr[o][i];
+     
+     }}
+   System.out.println("1D array ");
+   for(int f=0;f<ar1r2.length;f++){
+     
+     
+     
+     System.out.print(ar1r2[f]+" ");
+   
+   }
+   //task9 
+import java.util.Scanner;
+public class Task9 {
+  
+  
+  public static void main(String[] args) { 
+    Scanner t =new Scanner (System.in);
+    
+    
+    System.out.println("Enter the length of the square matrix :");
+    int rem =t.nextInt();
+    int[][] n =new int[rem][rem];
+    
+    
+    System.out.println("eneter the elements of th mtrix :");
+              for(int k  =0;k<rem;k++){
+      for(int e =0;e<rem;e++){
+        
+        
+        
+        
+      n[k][e]=t.nextInt();
+      
+      
+      
+      }}
+    
+    
+    
+    
+   boolean hg =true;
+   for(int rp=0;rp<rem;rp++){
+
+
+
+     for(int w =0;w<rem;w++){
+
+
+
+       if(rp==w&&n[rp][w]!=1){
+
+
+       hg =false;
+       break;
+       }
+       else if (rp!=w&&n[rp][w]!=0){
+       
+       hg=false;
+       break;
+       
+       }}
+     
+     
+   
+     if(!hg){
+     break;
+     }}
+   
+   
+   if(hg){
+   System.out.println("Identity matrix ");
+   
+   
+   
+   }
+   else{
+   System.out.println("Not an Identity matrix ");
+   
+   }}}}
+  //task10  
+    
+  import java.util.Scanner;
+
+
+
+public class TreasureHunt{
+  
+  
+  
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int [][] arr2D = {{0, 0, 10, 0, -1},
+                      {0, -1, 0, 0, -1},
+                      {-1, 0, -1, 0, 0},
+                      {0, -1, 7, 0, -1},
+                      {0, -1, 0, -1, 0}
+    };
+    System.out.println("Initial Map:");
+    printMap(arr2D);
+    int row = arr2D.length;
+    int col = arr2D[0].length;
+    int row_pos = -1, col_pos = -1;
+    for(int u =0;u<row;u++){
+                 for(int yum =0;yum<col;yum++){
+        
+                   if(arr2D[u][yum]==7){
+      row_pos =u;
+      col_pos =yum;
+      
+                   }}
+      
+    
+    
+    
+    }
+    
+    int turns = 5;
+    while (turns > 0) {
+      int new_row = row_pos, new_col = col_pos;
+      System.out.printf("Enter move %d: ",(6-turns));
+      String inp = sc.nextLine();
+     
+      
+      
+      
+      if(inp.equals("RIGHT")){
+      
+      new_col++;
+      
+      }
+      else if(inp.equals("UP")){
+      
+      new_row--;
+      }
+      else if(inp.equals("DOWN")){
+      
+       new_row ++;
+        
+      }
+      else if(inp.equals("LEFT")){
+       new_col--;
+      
+      
+      }
+      if( new_row<0||new_row>=row){
+      
+      System.out.println("Player fell outside the playing area. Game over!");
+      break;
+      }
+      if(new_col<0||new_col>=col){
+      
+      System.out.println("Player fell outside the playing area. Game over!");
+      break;
+      
+      
+      }
+      if(arr2D[new_row][new_col]==-1){
+     System.out.println("Player stepped on mine. Game Over!");
+
+     
+     
+     
+      break;
+      }
+      
+      
+      if(arr2D[new_row][new_col]==10){
+      System.out.println("Treasure found. You win!");
+      System.out.println("final state:");
+      for(int im=0;im<arr2D.length-1;im++){
+        for(int yur=0;yur<=arr2D[im].length-1;yur++){
+          if(arr2D[im][yur]==7){
+          arr2D[im][yur]=0;
+          
+          }
+          if(arr2D[im][yur]==10){
+          arr2D[im][yur]=7;
+          
+          }
+        System.out.println(arr2D[im][yur]+" ");
+        
+        
+        
+        }
+      System.out.println();
+      }}
+      arr2D[row_pos][col_pos] = 0; 
+     row_pos = new_row;
+                        col_pos = new_col;
+                        
+                        
+                arr2D[row_pos][col_pos] = 7;
+                
+                
+                
+                
+      System.out.println("Current state:");
+      printMap(arr2D);
+      turns--;
+    }
+    if (turns == 0) {
+      System.out.println("Failed to find the treasure.");
+    }}
+  
+  
+  public static void printMap(int[][] arr) { 
+    int u=0;
+    while(u<=arr.length-1){
+      for(int y =0;y<=arr[u].length-1;y++){
+      System.out.print(arr[u][y]+" ");
+      
+      
+      
+      }
+      System.out.println();
+    
+    
+    
+    
+    
+    
+      u++;}}}
+    
+  
+
+  
+  
+  
+  
+  
+
+ 
+    
+    
+    
+  
+  
+  
+  
+
+  
+    
+    
+    
+    
+  
+  
+  
+  
+
