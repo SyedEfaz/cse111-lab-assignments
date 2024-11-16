@@ -1,0 +1,420 @@
+//task1
+public class  UniversityTester{
+  public static void main(String [] args ){
+  
+  University u1hb = new University();
+  University u2hb =new University();
+  System.out.println(u1hb);
+  System.out.println(u2hb);
+  
+  System.out.println(u1hb.country);
+  
+  System.out.println(u1hb.name);
+
+
+  System.out.println(u2hb.name);
+
+
+  System.out.println(u2hb.country);
+  u1hb.name="Imperial College";
+  u1hb.country="England";
+  u2hb.name="Brac Uniersity";
+  u2hb.counry="Bangladesh";
+  
+  
+  System.out.println(u1hb.country);
+  
+  System.out.println(u1hb.name);
+  System.out.println(u2hb.name);
+  System.out.println(u2hb.country);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task2
+public class  Student{
+
+
+
+public Sring name ="Default";
+
+
+
+public int id =0;
+
+
+
+}
+//task3
+public class   CSECourse{
+  public String name ="Programming language 2";
+  
+  
+  
+  
+  
+public  String courseCode="CSE111";
+      public int Credit =3;
+
+
+
+
+
+
+
+
+
+}
+//task4
+public class ImaginaryNumber{
+
+public int realPart;
+public int imaginaryPart;
+
+public void printNumber(){
+
+  System.out.println(realPart+"+"+imaginaryPart+"i");
+
+
+
+
+
+
+
+
+
+}}
+
+//task5
+public class Course{
+
+public String CT;
+public String CC;
+public int credit;
+
+
+public void updateDetails(String tp , String ym, int p){
+
+CT=tp;
+CC=ym;
+credit =p;
+
+
+
+
+
+
+}
+
+
+public void displayCourse(){
+  
+  System.out.println("Course Name:"+CT);
+System.out.println("Course Code:"+CC);
+System.out.println("Course Credit:"+credit);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task6
+public class Assignment{
+
+public int tasks;
+public String difficulty;
+public boolean submission;
+public void printDetails(){
+
+  System.out.println("Number of tasks:"+tasks);
+  System.out.println("Difficulty level:"+difficulty);
+  System.out.println("Submission required:"+submission);
+
+
+
+
+
+}
+public String makeOptional(){
+  
+  
+  if(!submission){
+  
+    return "Assignment will not require"+" \n "+"submission";
+
+  
+  }
+  else{
+    return "Submission is already not required";
+
+  
+  
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+}
+//task7
+public class CellPhone{
+
+public   String  [] crr =new String[3];
+public String contract;
+public String model="Unknown";
+public  int count =0;
+
+
+public  void printDetails(){
+
+  if(count<=crr.length){
+  
+    System.out.println("contract Stored :"+(count));
+      for(int y=0;y<=crr.length-1;y++){
+      System.out.println(crr[y]);
+    
+    
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  else{System.out.println("Memory is full , new contract cant be stored");}
+
+
+
+
+
+
+}
+public void storeContract(String m){
+count+=1;
+for(int u=0;u<count;u++){
+
+crr[u]=m;
+
+
+
+
+
+
+
+}
+System.out.println("Contract Stored");
+
+
+}
+//task8
+
+public class Employee {
+  
+ public String name ;
+ public String designation;
+ public double salary;
+ 
+ 
+ public void displayInfo(){
+ 
+   System.out.println("Empolyee Name:"+name);
+ System.out.println("Empolyee salary:"+salary+"tk");
+ System.out.println("Empolyee designation:"+designation);
+ 
+ 
+ }
+ public void newEmployee(String doodee){
+ 
+ name = doodee;
+ salary=30000.0;
+ designation="Junior";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+ public void calculateTax(){
+   if(salary>30000.0){
+   
+     if(salary>50000.0){
+     
+     double m = salary*0.3;
+     System.out.println(name+"need to pay"+m);
+     
+     }
+     if(salary<30000.0){
+     
+     double mn = salary*0.1;
+     System.out.println(name+"need to pay"+mn);
+     
+     
+     }
+   
+   
+   
+   
+   
+   
+   
+   
+   }else{System.out.println("No need to pay tax ");}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+
+ public void promoteEmployee(String n){
+ 
+   if(n.equals("lead")){
+   designation =n;
+     System.out.println(name+"has been promoted to"+n);
+     salary+=50000.0;
+     System.out.println("New salary :"+salary+"tk");
+   
+   
+   }
+ if(n.equals("manager")){
+   designation =n;
+     System.out.println(name+"has been promoted to"+n);
+     salary+=75000.0;
+     System.out.println("New salary :"+salary+"tk");
+   
+   
+   }
+ if(n.equals("senior")){
+   designation =n;
+     System.out.println(name+"has been promoted to"+n);
+     salary+=25000.0;
+     System.out.println("New salary :"+salary+"tk");
+   
+   
+   }
+ 
+ 
+ 
+ 
+ }
+
+ 
+ 
+ 
+ 
+ 
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
