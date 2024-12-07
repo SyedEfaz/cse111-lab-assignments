@@ -1,0 +1,845 @@
+//task1
+public class Student{
+public String name;
+public String dept;
+public String prog;
+
+public Student(String a , String b){
+
+name=a;
+prog=b;
+
+
+
+
+
+
+
+}
+
+public void updateName(String a ){
+
+
+name=a;
+
+}
+
+public void updateProgram(String a){
+
+prog =a;
+
+}
+public String accessProgram(){
+
+return prog;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task2
+public class Toy{
+public String name;
+public int price;
+public Toy (String m ,int q){
+name=m;
+price=q;
+System.out.println("A new Toy has been created");
+
+
+
+}
+public void updatePrice(int m){
+
+price =m;
+
+
+}
+  public void showPrice(){
+ System.out.println("price:"+price+"taka"); 
+  
+  }
+public void updateName(String n){
+
+name=n;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task3
+public class Shape2D{
+public double area;
+public String name;
+public int sidea;
+public int sideb;
+public int sidec;
+
+public Shape2D (){
+name="Square";
+area=5.0*5.0;
+System.out.println("A Square has been created with length: 5");
+
+
+}
+public Shape2D (int m,int n){
+
+name ="Rectangle";
+area=(double)(m*n);
+System.out.println("A Rectangle has been created with length:"+m+ "and breadth: " +n);
+
+
+
+}
+public Shape2D (int r,int y,String u){
+
+name=u;
+System.out.println("A" +name+"has been created with height:" +r+ "and base: " +y);
+area =0.5*r*y;
+
+
+}
+public Shape2D (int r,int y,int u){
+name="Triangle";
+System.out.println("A Triangle has been created with the following sides:"+ r+", "+y+", "+u);
+int s =(r+y+u)/2;
+area=(double)((s-r)*(s-y)*(s-u));
+
+}
+public void area(){
+System.out.println("The area of the"+ name+ "is:" +area);
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task4
+public class Student{
+public int Id;
+public double cg;
+public String[] p= new String[4];
+public int count;
+
+public Student (int g,double d){
+
+Id=g;
+cg=d;
+System.out.println("A student with ID "+Id +"and cgpa"+ cg+" has been created.");
+
+
+
+
+}
+
+public Student (int h){
+
+Id=h;
+
+System.out.println("A student with ID "+Id +"has been created.");
+
+}
+public void storeCG(double d){
+
+cg=d;
+
+}
+public void storeID(int d){
+
+Id=d;
+
+}
+public void addCourse(String g){
+  if(cg==0){
+  
+  System.out.println("Failed to add "+g+" Set CG first");
+  }
+  else{
+    if(cg<3.0){
+      if(count<3){
+      p[count++]=g;
+      }
+      else{
+      
+      System.out.println("Failed to add "+g+"CG is low. Can't add more than 3courses. ");
+      }}
+      
+     else if(4.0<=cg&&cg<=3.0){
+      
+      if(count<4){
+      p[count++]=g;
+      }
+      else{
+      
+      System.out.println("Failed to add "+g+"Maximum 4 courses are allowed");
+      }
+      
+      
+      
+      
+      } 
+    
+    
+    }
+    
+  
+  
+  
+  }
+
+
+
+
+
+public void showAdvisee(){
+System.out.println("Student ID :"+Id);
+System.out.println("CGPA : "+cg);
+System.out.println("Added courses are: ");
+for(int i =0;i<count;i++){
+System.out.print(p[i]+" ");
+
+
+
+
+}
+
+
+
+
+
+
+}
+public void addCourse(String[] m){
+
+
+  for(int i=0;i<m.length;i++){
+  
+    if(i<4){
+    
+    p[i]=m[i];
+    
+    }
+    else{
+    
+   System.out.println("Failed to add "+m[i]+"Maximum 4 courses are allowed"); 
+    
+    }
+  
+  
+  }
+
+
+
+
+
+}
+
+public void removeAllCourse(){
+count=0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task5
+public class  Triangle{
+public int Aj;
+ public int Bj;
+  public int Cj;
+  public int peri;
+
+  public void updateSides(int a,int b, int c){
+  
+  peri=a+b+c;
+  Aj=a;
+    Bj=b;
+    Cj=c;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+  public void triangleDetails(){
+  System.out.println("Three sides of the triangle are"+Aj+","+Bj+","+Cj);
+  
+  System.out.println("Perimeter:"+peri);
+  
+  
+  
+  
+  
+  
+  }
+  public String printTriangleType(){
+  
+    if(Aj==Bj&&Bj==Cj&&Aj==Cj){
+    
+    
+    return"This is an Equilateral Triangle.";
+    
+    }
+    else if(Aj==Bj||Bj==Cj||Cj==Aj){
+    
+    return"This is a Isosceles Triangle.";
+    
+    }
+    else{
+    
+    return"This is a Scalene Triangle.";
+    }
+  
+  
+  }
+  public void compareTrinagles(Triangle t){
+  
+    if(this==t){
+    
+    System.out.println("These two triangle objects have the same address.");
+    
+    
+    }
+    else{
+      if((Aj==t.Aj||Aj==t.Bj||Aj==t.Cj)&&(Bj==t.Aj||Bj==t.Bj||Bj==t.Cj)&&(Cj==t.Aj||Cj==t.Bj||Cj==t.Cj)){
+      
+      
+      System.out.println("Addresses are different but the sides of the triangles are equal.");
+      
+      }
+    
+      else if (peri==t.peri){
+      
+      System.out.println("Only the perimeter of both triangles is equal.");
+      
+      
+      }
+      else{
+      
+        System.out.println("Addresses, length of the sides and perimeter all are different.");
+      
+      
+      
+      }
+    
+    
+    
+    
+    
+    }
+  
+  
+  
+  
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task6
+
+public class Course{
+
+
+public String[] course =new String [100];
+public String name;
+public Course (String q){
+
+name=q;
+
+}
+
+
+
+
+
+
+}
+public class Teacher{
+public int count;
+public String name;
+public String department;
+public String[] courses=new String[100];
+public Teacher(String n, String d){
+name =n;
+department =d;
+System.out.println("A new teacher has been created");
+
+}
+public void addCourse(Course c){
+
+
+
+
+courses[count++]= c.name;
+
+
+
+
+}
+public void printDetail(){
+
+System.out.println("Name"+name);
+System.out.println("Department"+ department);
+System.out.println("list of courses");
+for(int i =0;i<count;i++){
+
+System.out.println(courses[i]);
+
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+//task7
+public class BracuBus{
+
+public String[] p;
+public int count;
+public int capacity;
+public String loco;
+public  Bracubus(String g){
+
+p=new String[2];
+loco=g;
+
+}
+public  BracuBus(String g,int q){
+
+p=new String[q];
+capacity =q;
+loco=g;
+System.out.println("Bus Route:");
+System.out.println("Passenger count :"+count+"(Max:"+p.length+")");
+System.out.println("passenger on board");
+
+}
+public void board(){
+
+  if(count==0){
+  
+  System.out.println("No passengers");
+  
+  
+  }}
+public void board(BracuStudent s, BracuStudent g){
+
+board(s);
+board(g);
+
+
+
+
+}
+public void board(BracuStudent b){
+
+  if(b.flag==false){
+    System.out.println("You don't have a bus pass!");
+  
+  
+  }
+  else{
+    if(b.location.equals(loco)){
+      if(count<p.length){
+      System.out.println(b.name+"boarded the bus");
+      p[count++]=b.name;
+      }
+      else{
+      
+      System.out.println("bus is full");
+      
+      }
+    
+    
+    }
+    else{
+      System.out.println("You got on the wrong bus!");
+      
+      
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+
+
+
+
+}
+public void showDetails(){
+System.out.println("Bus Route:"+loco);
+System.out.println("Passenger count :"+count+"(Max:"+p.length+")");
+System.out.println("passenger on board");
+
+for(int i=0;i<count;i++){
+System.out.print(p[i]+" ");
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+public class BracuStudent{
+public String name;
+public String location;
+public boolean flag;
+
+
+public BracuStudent(String f, String g){
+
+
+name=f;
+location =g;
+}
+public void getPass(){
+
+flag =true;
+
+}
+public void updateHome(String g ){
+
+location = g;
+
+
+}
+public void showDetails(){
+
+System.out.println("Student name:"+name);
+System.out.println("lives in "+location);
+System.out.println("Have a pass"+flag);
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+//task8
+public class Student {
+  
+  
+  
+    public String name;
+    
+    
+    
+    public String    department;
+    public int id;
+    
+    public String password ;
+    
+    public String email;
+    
+    public String[] courses;
+
+    public Student(String n, int i, String d) {
+        name = n;
+        id = i;
+        department = d;
+        
+        System.out.println("Student object is created");
+    }}
+
+public class Usis{
+public Student [] p =new Student[100];
+public int totalAdvisee;
+public int count;
+public Usis(){
+
+System.out.println("Usis is ready to use ");
+
+}
+public void login(Student r){
+
+  if(r.email==null||r.password==null){
+  
+System.out.println("Email and password needs to be set");
+  
+  
+  }
+  else{
+  
+  System.out.println("login successfull");
+  p[count++]=r;
+  
+  
+  
+  }}
+public void advising (Student r){
+
+  if(r.email==null||r.password==null){
+  
+ System.out.println("please login to advise courses"); 
+  
+  
+  }
+  
+  else{
+ System.out.println("you havent selected any course");
+  
+  
+  }}
+
+public void advising(Student r,String m,String n,String o,String g){
+
+System.out.println("you need special approval to take more than 3 courses");
+  
+
+
+
+}
+public void advising (Student r,String j,String k,String h){
+System.out.println("Advising successfull");
+totalAdvisee++;
+String [] g={j,k,h};
+
+
+r.courses=g;
+
+
+
+
+
+
+}
+public void allAdviseeInfo(){
+System.out.println("total Advisee:"+totalAdvisee);
+System.out.print("Name"+p[totalAdvisee-1].name);
+System.out.print("ID:"+p[totalAdvisee-1].id);
+System.out.println("Department"+p[totalAdvisee-1].department);
+System.out.println("Advised Courses:");
+for(int i =0;i<p[totalAdvisee-1].courses.length;i++){
+System.out.print(p[totalAdvisee-1].courses[i]+" ");
+
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
